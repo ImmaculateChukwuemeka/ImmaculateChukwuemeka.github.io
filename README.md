@@ -16,7 +16,7 @@ Through coursework, projects, and research activities, I strive to apply analyti
 
 ## 💡 Personal Value Proposition
 
-As a graduate student specializing in Artificial Intelligence and Data Analytics, I combine analytical thinking, technical problem-solving, and interdisciplinary knowledge to develop data-driven solutions to complex challenges. Through academic research, practical projects, and continuous learning, I aim to create meaningful insights and innovative applications that support informed decision-making and technological advancement.
+As an MSc student specializing in Artificial Intelligence and Data Analytics with over 8 years of experience in the oil and gas industry, I help bridge domain expertise and data science to transform complex operational data into actionable insights. By applying machine learning and predictive analytics to petroleum engineering challenges, I focus on improving production efficiency, enhancing asset reliability, and supporting more informed decision-making in mature oilfield operations, with the goal of enabling more sustainable and optimized energy systems.
 
 ---
 
