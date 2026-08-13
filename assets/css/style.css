@@ -241,6 +241,11 @@ nav ul li a:hover::after {
     flex-grow: 1;
 }
 
+.project-card-content p:last-of-type {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
 .project-buttons {
     display: flex;
     gap: 15px;
