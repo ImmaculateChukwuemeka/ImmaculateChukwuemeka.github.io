@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Immaculate Chukwuemeka — Petroleum Engineer × AI &amp; Data Analytics</title>
 <meta name="description" content="Immaculate Chukwuemeka bridges eight years of petroleum engineering with AI, data analytics, responsible AI, and human-centered technology to solve practical problems and support better decisions.">
+<link rel="icon" type="image/png" href="signatureicon.png">
+<link rel="apple-touch-icon" href="signatureicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -57,7 +59,8 @@
     max-width:1080px;margin:0 auto;padding:16px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .brand{font-weight:700;font-size:18px;color:var(--navy);letter-spacing:-0.02em;}
+  .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--navy);letter-spacing:-0.02em;}
+  .brand-logo{width:34px;height:34px;object-fit:contain;display:block;}
   .brand span{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
   .topnav{display:flex;gap:28px;font-size:14px;font-weight:600;color:var(--gray);}
   .topnav a:hover{color:var(--rust);}
@@ -94,10 +97,11 @@
   }
   .avatar{
     position:relative;z-index:1;
-    width:200px;height:200px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Poppins',sans-serif;font-weight:700;font-size:64px;color:#fff;
+    width:220px;height:220px;border-radius:50%;
+    object-fit:cover;
+    object-position:center 22%;
+    display:block;
+    border:6px solid #fff;
     box-shadow:0 12px 40px rgba(27,42,65,0.30);
   }
   .hero h1{font-size:52px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;}
@@ -259,13 +263,19 @@
 
   .page{display:none;}
   .page.active{display:block;}
+
+  @media(max-width:640px){
+    .brand{font-size:16px;gap:8px;}
+    .brand-logo{width:30px;height:30px;}
+    .avatar{width:190px;height:190px;}
+  }
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="brand">Immaculate <span>Chukwuemeka</span></div>
+    <div class="brand"><img class="brand-logo" src="signatureicon.png" alt="" aria-hidden="true">Immaculate <span>Chukwuemeka</span></div>
     <div class="topnav">
       <a href="#" onclick="go('home')">Home</a>
       <a href="#" onclick="go('artifacts')">Artifacts</a>
@@ -288,7 +298,7 @@
     <div class="wrap">
       <div class="avatar-wrap">
         <div class="avatar-glow"></div>
-        <div class="avatar">IC</div>
+        <img class="avatar" src="assets/images/immaculatechukwuemeka.png" alt="Portrait of Immaculate Chukwuemeka">
       </div>
       <h1>Hi, I'm <span class="name">Immaculate Chukwuemeka</span></h1>
       <div class="role">Petroleum Engineer → AI &amp; Data Analytics</div>
@@ -298,7 +308,7 @@
         <a class="btn btn-outline" href="assets/Immaculate_Chukwuemeka_CV.pdf" download>Download CV</a>
       </div>
       <div class="social-row">
-        <a href="https://www.linkedin.com/in/immaculate-okoruwa/" target="_blank" rel="noopener" title="LinkedIn" aria-el="LinkedIn">
+        <a href="https://www.linkedin.com/in/immaculate-okoruwa/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
         <a href="https://github.com/ImmaculateChukwuemeka" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
@@ -507,7 +517,7 @@ const PROJECTS = [
       "Human-Centered AI"
     ],
     "isNew": true,
-    "link": "https://mizou.com/preview-bot?ID=147972",
+    "link": "assets/AI_Lab_Documentation_Final.pdf",
     "sections": {
       "Introduction": "Adult English-language learners may be learning computer skills and a new language at the same time. This AI Lab project explored whether a multilingual assistant could provide simple, on-demand support outside the classroom while remaining focused on real learner needs rather than technology for its own sake.",
       "Objective": "Build and test a multilingual digital-skills assistant that helps adult learners with computer basics, Microsoft Word, Excel, PowerPoint, email, and internet skills in English, Spanish, Arabic, or French.",
