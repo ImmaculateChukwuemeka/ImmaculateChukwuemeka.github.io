@@ -184,9 +184,8 @@
   }
   .proj-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
   .proj-thumb{
-    width:calc(100% + 64px);margin:-32px -32px 20px;
-    height:160px;overflow:hidden;border-radius:var(--radius) var(--radius) 0 0;
-    background:var(--bg-soft);
+    width:100%;height:160px;overflow:hidden;border-radius:10px;
+    margin:12px 0 16px;background:var(--bg-soft);
   }
   .proj-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
   .proj-icon{font-size:32px;margin-bottom:16px;}
@@ -474,7 +473,7 @@ const PROJECTS = [
   {
     "id": 1,
     "icon": "🛢️",
-    "image": "assets/images/Pipe Thickness Loss Analysis Dashboard.png",
+    "image": "assets/images/project1-cover.png",
     "title": "AI-Assisted Predictive Maintenance Analysis — Pipe Thickness-Loss Risk Prioritization",
     "desc": "AI-assisted analysis of pipe thickness-loss data from 1,000 assets to identify degradation patterns and prioritize which assets may require the most immediate inspection attention.",
     "tags": [
@@ -610,9 +609,9 @@ function renderGrid(){
   grid.innerHTML = PROJECTS.map(p => `
     <div class="proj-card" onclick="openDetail(${p.id})">
       ${p.isNew ? '<div class="new-badge">✦ New</div>' : ''}
-      ${p.image ? `<div class="proj-thumb"><img src="${p.image}" alt="${p.title} preview" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <div class="proj-icon">${p.icon}</div>
       <h3>${p.title}</h3>
+      ${p.image ? `<div class="proj-thumb"><img src="${p.image}" alt="${p.title} preview" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <p>${p.desc}</p>
       <div class="tag-row">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
       <div class="proj-foot">
