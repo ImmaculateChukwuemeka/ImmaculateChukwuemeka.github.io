@@ -183,6 +183,12 @@
     cursor:pointer;
   }
   .proj-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
+  .proj-thumb{
+    width:calc(100% + 64px);margin:-32px -32px 20px;
+    height:160px;overflow:hidden;border-radius:var(--radius) var(--radius) 0 0;
+    background:var(--bg-soft);
+  }
+  .proj-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
   .proj-icon{font-size:32px;margin-bottom:16px;}
   .proj-card h3{font-size:21px;font-weight:700;line-height:1.35;margin-bottom:12px;}
   .proj-card p{font-size:14.5px;line-height:1.65;color:var(--gray);flex-grow:1;}
@@ -468,6 +474,7 @@ const PROJECTS = [
   {
     "id": 1,
     "icon": "🛢️",
+    "image": "assets/images/project1-cover.png",
     "title": "AI-Assisted Predictive Maintenance Analysis — Pipe Thickness-Loss Risk Prioritization",
     "desc": "AI-assisted analysis of pipe thickness-loss data from 1,000 assets to identify degradation patterns and prioritize which assets may require the most immediate inspection attention.",
     "tags": [
@@ -488,6 +495,7 @@ const PROJECTS = [
   },
   {
     "id": 2,
+    "image": "assets/images/project2-cover.png",
     "icon": "📉",
     "title": "ML for Oil & Gas Production Forecasting",
     "desc": "A critical review of a published NETL machine-learning study that used historical well data to forecast oil, water, and gas production, with particular attention to how the model was developed, tested, and evaluated.",
@@ -509,6 +517,7 @@ const PROJECTS = [
   },
   {
     "id": 7,
+    "image": "assets/images/project7-cover.png",
     "icon": "🌐",
     "title": "Multilingual Digital Skills Learning Assistant — AI Lab",
     "desc": "A human-centered AI tutor prototype designed to give adult English-language learners beginner-friendly digital-skills support in English, Spanish, Arabic, and French.",
@@ -530,6 +539,7 @@ const PROJECTS = [
   },
   {
     "id": 3,
+    "image": "assets/images/project3-cover.png",
     "icon": "🎤",
     "title": "Spotlight Speaker — AI Speaker Matchmaking Bot",
     "desc": "A collaborative Generative AI prototype that turns event needs into speaker recommendations across topic, audience, budget, language, and availability, using a seven-speaker knowledge base.",
@@ -551,6 +561,7 @@ const PROJECTS = [
   },
   {
     "id": 8,
+    "image": "assets/images/project8-cover.png",
     "icon": "⚖️",
     "title": "Responsible AI Ethics Case Study — Facial Recognition & Wrongful Arrest",
     "desc": "A critical analysis of a wrongful facial-recognition arrest examining algorithmic bias, automation bias, human verification, and institutional accountability.",
@@ -572,6 +583,7 @@ const PROJECTS = [
   },
   {
     "id": 9,
+    "image": "assets/images/project9-cover.png",
     "icon": "📰",
     "title": "The Signal — Commercial Applications of AI",
     "desc": "A business-focused newsletter analyzing how AI is moving into real workflows in healthcare, banking, and semiconductor engineering while keeping verification and human accountability in view.",
@@ -598,6 +610,7 @@ function renderGrid(){
   grid.innerHTML = PROJECTS.map(p => `
     <div class="proj-card" onclick="openDetail(${p.id})">
       ${p.isNew ? '<div class="new-badge">✦ New</div>' : ''}
+      ${p.image ? `<div class="proj-thumb"><img src="${p.image}" alt="${p.title} preview" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <div class="proj-icon">${p.icon}</div>
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
